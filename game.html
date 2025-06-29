@@ -31,7 +31,7 @@
     <script>
       function computerMove() {
         let computerMove = Math.random();
-        let computerChoice = '';
+        let computerChoice = "";
         if (computerMove >= 0 && computerMove < 1 / 3) {
           computerChoice = "Rock";
         } else if (computerMove >= 0 && computerMove < 2 / 3) {
@@ -40,13 +40,13 @@
           computerChoice = "Scissors";
         }
         // console.log(computerChoice);
+        return computerChoice;
       }
 
       function playerMove(playGame) {
+       const computerChoice = computerMove();
         let result = "";
-        let computerChoice = '';
-        if (playGame === "Rock") { 
-          let result = '';
+        if (playGame === "Rock") {
           if (computerChoice === "Rock") {
             result = "Tie";
           } else if (computerChoice === "Paper") {
@@ -54,27 +54,28 @@
           } else if (computerChoice === "Scissors") {
             result = "Lose";
           }
-        } else if(playGame === 'Paper'){
-            if(computerChoice === 'Rock'){
-                result = 'Lose'
-            }else if(computerChoice === 'Paper'){
-                result = 'Tie'
-            }else if (computerChoice === 'Scissors' ){
-                result = 'Win'
-            }
-        }else if(playGame === 'Scissors') {
-            if(computerChoice === 'Rock'){
-                result = 'Lose'
-            }else if(computerChoice === 'Paper'){
-                result = 'Win'
-            }else if(computerChoice === 'Scissors'){
-                result = 'Tie'
-            }
-            console.log(result)
+        } else if (playGame === "Paper") {
+          if (computerChoice === "Rock") {
+            result = "Lose";
+          } else if (computerChoice === "Paper") {
+            result = "Tie";
+          } else if (computerChoice === "Scissors") {
+            result = "Win";
+          }
+        } else if (playGame === "Scissors") {
+          if (computerChoice === "Rock") {
+            result = "Lose";
+          } else if (computerChoice === "Paper") {
+            result = "Win";
+          } else if (computerChoice === "Scissors") {
+            result = "Tie";
+          }
+        //   console.log(result);
         }
-        alert(`You picked ${playGame}. Computer picked ${computerChoice}. Its a ${result} `);
+        alert(
+          `You picked ${playGame}. Computer picked ${computerChoice}. Its a ${result} `
+        );
       }
     </script>
   </body>
-  <!-- <script src="loop.js"></script> -->
 </html>
