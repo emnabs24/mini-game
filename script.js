@@ -53,10 +53,17 @@
           score.losses += 1;
         }else if(result === "Tie"){
           score.tie += 1;
-        }
+        } 
 
         alert(
           `You picked ${playGame}. Computer picked ${computerChoice}. Its a ${result} 
-Win: ${score.win}, Losses: ${score.losses}, Tie:${score.tie}`
+          Win: ${score.win}, Losses: ${score.losses}, Tie: ${score.tie}`
         );
       }
+
+          function resetScore(){ 
+              score.win = 0;
+            score.losses = 0;
+            score.tie = 0;
+            alert(`Score was reset`)
+          }
