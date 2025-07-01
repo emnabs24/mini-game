@@ -57,7 +57,7 @@
 
         alert(
           `You picked ${playGame}. Computer picked ${computerChoice}. Its a ${result} 
-          Win: ${score.win}, Losses: ${score.losses}, Tie: ${score.tie}`
+Win: ${score.win}, Losses: ${score.losses}, Tie: ${score.tie}`
         );
       }
 
