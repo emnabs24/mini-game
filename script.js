@@ -6,7 +6,7 @@
         losses:0,
         tie:0,
       }
-      };
+      }
 
       function computerMove() {
         let computerMove = Math.random();
