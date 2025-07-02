@@ -29,7 +29,8 @@
     >
       Scissors
     </button>
-    <button onclick="resetScore()">Reset score</button>
+    <button onclick="resetScore();
+    localStorage.removeItem('score')">Reset score</button>
     <script src="script.js">
     </script>
   </body>

@@ -1,8 +1,12 @@
-      const score ={
-        win: 0,
-        losses: 0,
-        tie: 0,
-      }; 
+      let score =JSON.parse(localStorage.getItem('score')); 
+      
+      if(!score){
+        score = {
+        win:0,
+        losses:0,
+        tie:0,
+      }
+      };
 
       function computerMove() {
         let computerMove = Math.random();
@@ -14,7 +18,6 @@
         } else if (computerMove >= 0 && computerMove < 3 / 3) {
           computerChoice = "Scissors";
         }
-        // console.log(computerChoice);
         return computerChoice;
       }
 
@@ -54,6 +57,8 @@
         }else if(result === "Tie"){
           score.tie += 1;
         } 
+        
+        localStorage.setItem('score', JSON.stringify(score));
 
         alert(
           `You picked ${playGame}. Computer picked ${computerChoice}. Its a ${result} 
