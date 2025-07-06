@@ -1,59 +1,79 @@
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #dfe9f3, #ffffff);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
   text-align: center;
-  background: #f8f9fa;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  color: #333;
 }
 
 h1 {
-  color: #333;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #111827;
 }
 
-.buttons {
-    margin-bottom: 20px;
-    
+.button-group {
+  margin-bottom: 30px;
 }
 
 button {
-  font-size: 1rem;
-  padding: 10px 20px;
+  padding: 12px 24px;
   margin: 10px;
+  font-size: 18px;
   border: none;
-  border-radius: 8px;
-  background-color: #007bff;
-  color: white;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  opacity: 0.9;
 }
 
-button.reset {
-  background-color: #dc3545;
+#rockBtn {
+  background-color: #ef4444;
+  color: white;
+}
+#paperBtn {
+  background-color: #3b82f6;
+  color: white;
+}
+#scissorsBtn {
+  background-color: #10b981;
+  color: white;
+}
+.reset-btn {
+  margin-top: 20px;
+  background-color: #6b7280;
+  color: white;
 }
 
-button.reset:hover {
-  background-color: #a71d2a;
-}
-
-.scoreboard {
+.result {
   font-size: 1.2rem;
-  color: #444;
-  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.result p {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 12px auto;
+  max-width: 400px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.myResult {
+  color: #0c4a6e;
+}
+
+.computerResult {
+  color: #92400e;
+}
+
+.myScore {
+  color: #064e3b;
+  font-weight: 600;
 }
