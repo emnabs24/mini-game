@@ -49,6 +49,10 @@ function playerMove(playGame) {
     } else if (computerChoice === "Scissors") {
       result = "Tie";
     }
+    document.querySelector(".myResult").innerHTML = `You picked ${playGame}.`;
+    document.querySelector(
+      ".computerResult"
+    ).innerHTML = ` Computer picked ${computerChoice}.`;
   }
 
   if (result === "Win") {
